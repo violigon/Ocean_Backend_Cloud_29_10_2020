@@ -5,8 +5,7 @@ const ObjectId = mongodb.ObjectId;
 
 (async () => {
 
-
-const connectionString = 'mongodb://localhost:27017'
+const connectionString = 'mongodb+srv://admin:admin@cluster0.rirht.mongodb.net/ocean_mongodb?retryWrites=true&w=majority'
 
 console.info('Conectando ao bando de dados MongoDB...');
 
@@ -14,7 +13,7 @@ const options = {
     useUnifiedTopology: true
 };
 
-// const client = await mongodb.MongoClient.connect(connectionString, options);
+const client = await mongodb.MongoClient.connect(connectionString, options);
 
 console.info('MongoDb conectado com sucesso!');
 
@@ -53,9 +52,9 @@ Descrição: Remove mensagem específica pelo ID
 app.get('/', function (req, res) {
   res.send('Hello World');
 });
-/*npm
-// const db = client.db('Ocean_Backend_Banco_de_Dados_27_10_2020');
-// const mensagens = db.collection('mensagens');
+
+const db = client.db('Ocean_Backend_Banco_de_Dados_27_10_2020');
+const mensagens = db.collection('mensagens');
 
 // Read All
 app.get('/mensagem', async function (req, res) {
@@ -110,7 +109,7 @@ app.delete('/mensagem/:id', async function (req, res) {
 
     res.send(`A mensagem de ID ${id} foi removida com sucesso.`);
 });
-*/
+
 app.listen(port, function () {
     console.info('App rodando em http://localhost:' + port);
 });
