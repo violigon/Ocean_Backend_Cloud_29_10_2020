@@ -53,7 +53,7 @@ app.get('/', function (req, res) {
   res.send('Hello World');
 });
 
-const db = client.db('Ocean_Backend_Banco_de_Dados_27_10_2020');
+const db = client.db('ocean_mongodb');
 const mensagens = db.collection('mensagens');
 
 // Read All
