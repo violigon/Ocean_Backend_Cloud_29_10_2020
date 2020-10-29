@@ -1,0 +1,175 @@
+{
+	"info": {
+		"_postman_id": "30aec5b1-a259-4222-851b-239359deb49f",
+		"name": "Ocean_Backend_27_10_2020",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Hello World",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}",
+					"host": [
+						"{{API_URL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ler todas as mensagens",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/mensagem",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"mensagem"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ler mensagem pelo ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/mensagem/5f9899a0bd239060b0a87987",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"mensagem",
+						"5f9899a0bd239060b0a87987"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remover mensagem pelo ID Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/mensagem/5f9899a0bd239060b0a87987",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"mensagem",
+						"5f9899a0bd239060b0a87987"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar mensagem",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"texto\": \"Mensagem enviada pela API\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/mensagem",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"mensagem"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar mensagem Copy",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"texto\": \"Mensagem atualizada teste\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/mensagem/5f9899a0bd239060b0a87987",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"mensagem",
+						"5f9899a0bd239060b0a87987"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
